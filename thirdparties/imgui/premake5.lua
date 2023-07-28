@@ -10,12 +10,11 @@ project "imgui"
 		objdir "%{wks.location}/../bin/%{cfg.system}-%{cfg.buildcfg}%{cfg.platform}/obj"
 
 		includedirs {
-			"include/imgui",
-			"../glfw/include"
+			"include/imgui"
 		}
 
 		links {
-			"opengl32.lib"
+			"d3d9.lib"
 		}
 
 		files {
