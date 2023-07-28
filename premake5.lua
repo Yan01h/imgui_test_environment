@@ -34,7 +34,7 @@ workspace "imgui_test_environment"
 		targetname "ImguiTestEnvironment"
 		kind "ConsoleApp"
 		language "C++"
-		cppdialect "C++17"
+		cppdialect "C++20"
 		staticruntime "Off"
 		location "build"
 
@@ -43,14 +43,12 @@ workspace "imgui_test_environment"
 
 		includedirs {
 			"include",
-			"thirdparties/glfw/include",
 			"thirdparties/imgui/include"
 		}
 
 		links {
 			"imgui",
-			"opengl32.lib",
-			"thirdparties/glfw/lib/%{cfg.platform}/glfw3.lib"
+			"d3d9.lib",
 		}
 
 		files {
