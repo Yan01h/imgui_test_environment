@@ -6,6 +6,8 @@ cmake_minimum_required(VERSION 3.7...3.27)
 #	Project   #
 ###############
 
+project(ImGuiTestEnvironment LANGUAGES CXX)
+
 # Disable in-source builds
 set(CMAKE_DISABLE_SOURCE_CHANGES ON)
 set(CMAKE_DISABLE_IN_SOURCE_BUILD ON)
@@ -22,6 +24,7 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
 if(MSVC)
     add_compile_options(/MP)
+    add_compile_options($<$<CONFIG:Debug>:/ZI>)
 endif()
 
 option(GIT_SUBMODULE "Check submodules during build" ON)
@@ -48,11 +51,9 @@ endif()
 # ImGui
 include(ImGui)
 
-#################
-#    Project    #
-#################
-
-project(ImGuiTestEnvironment LANGUAGES CXX)
+####################
+#    Executable    #
+####################
 
 # Source files
 set(SOURCE_FILES
