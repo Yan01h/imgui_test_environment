@@ -1,0 +1,7 @@
+[submodule "thirdparties/imgui"]
+	path = thirdparties/imgui
+	url = https://github.com/ocornut/imgui.git
+	branch = docking
+[submodule "thirdparties/freetype"]
+	path = thirdparties/freetype
+	url = https://github.com/freetype/freetype.git
